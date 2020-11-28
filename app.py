@@ -5,6 +5,10 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World Again'
 
+@app.route('/test')
+def process_test():
+    return 'Hello! You are accessing /test endpoint'
+
 @app.route('/version')
 def get_version():
     return 'App version (using generic webhook): <b>1.0</b>'
